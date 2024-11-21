@@ -1,0 +1,453 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    width: 100%; /* Use full width */
+    max-width: 1200px; /* Optional, for larger screens */
+    margin: 0 auto;
+    padding: 0 20px; /* Side padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    padding-right: 20px; /* Space between logo and text */
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffc107; /* Gold */
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+button {
+    background-color: #ffb107; /* Gold */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0a800; /* Slightly darker gold */
+}
+
+.hero {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-image {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.services {
+    padding: 50px 0;
+    background-color: #e7e7e7;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.contact {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact form button {
+    background-color: #ffb107; /* Gold */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.contact form button:hover {
+    background-color: #e0a800; /* Slightly darker gold */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffc107; /* Gold */
+}
+
+#home {
+    background-image: url(bg.jpg);
+    background-size: 200% 400%;
+    background-repeat: no-repeat;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start below the final position */
+    animation: reveal 3s ease-out forwards; /* Apply animation */
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End in final position */
+    }
+}
+
+.slide-in {
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slideIn 4s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slideIn {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 5s ease-out forwards;
+}
+
+.typing {
+    overflow: hidden;
+    border-right: .15em solid orange; /* Cursor */
+    white-space: nowrap;
+    display: inline-block; /* Ensure the element only takes up as much width as needed */
+    animation: typing 5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav links vertically */
+        width: 100%; /* Full width for mobile */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    nav a {
+        display: block; /* Full width clickable */
+        padding: 10px; /* Increase clickable area */
+        text-align: left;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* High z-index to be on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; /* Adjust width as needed for responsiveness */
+    max-width: 600px; /* Limit the maximum width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.modal-content img {
+    max-width: 100%;  
+    height: auto;       
+    display: block;     
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Expand for smaller screens */
+    }
+}
+
+
+.menu-icon {
+    position: absolute;
+    right: 50px; /* Adjust this value as needed */
+    top: 50px; /* Adjust for vertical positioning */
+    z-index: 100; /* Ensure the icon is above the slide menu */
+}
+
+
+.slide-menu {
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.3s ease-in-out;
+
+    position: fixed;
+    top: 20;
+    left: 0;
+    height: 55%;
+    border-radius: 20px;
+    width: 200px; /* Adjust as necessary */
+    background-color: #333; /* Menu background color */
+    z-index: 99; /* Lower than the icon */
+}
+
+
+.slide-menu a {
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.2s;
+}
+
+.slide-menu a:hover {
+    color: #ffb107;
+}
+
+.show-menu {
+    left: 0; /* Slide in */
+}
+
+.slide-menu {
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.3s ease;
+}
+
+.slide-menu.active {
+    transform: translateX(0); /* Slide in */
+}
+
+
+
+
+
+
+
+.chatbot-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Make sure it's on top */
+}
+
+.chatbot-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    height: 300px;
+}
+
+#user-input {
+    width: 80%;
+    padding: 5px;
+}
+
+#send-message {
+    padding: 5px 10px;
+    margin-left: 5px;
+}
+
+#close-chatbot {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Optional: Add some styling */
+        #phone{
+            width: auto;
+            height: 50px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px; /* Adjust the font size */
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/11418c4102.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="logo.png" sizes="14x16" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    
+
+
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jabez Mwewa">
+    <meta name="description" content="JI Technologies is an emerging tech company dedicated to innovation and excellence in engineering, providing cutting-edge solutions in various fields.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jitechnologies.com/">
+
+    <meta property="og:title" content="JI Technologies - Engineering the Future">
+    <meta property="og:description" content="Explore innovative engineering solutions at JI Technologies. Empowering businesses through technology.">
+    <meta property="og:image" content="https://www.jitechnologies.com/logo.png">
+    <meta property="og:url" content="https://www.jitechnologies.com/">
+    <meta property="og:type" content="website">
+
+
+
+
+
+
+    <title>JI Technologies - Engineering the Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container flex-container">
+            <a href="#"><img src="logo.png" alt="JI logo" class="logo"></a>
+            <h1 style="padding: 0 75% 0 0;">JI Technologies</h1>
+
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+     <div class="slide-menu" id="slideMenu">
+        <a href="#home"><i class="fa-solid fa-house"></i>  Home</a>
+        <a href="about.html"><i class="fa-solid fa-users"></i>  About Us</a>
+        <a href="#services"><i class="fa-solid fa-list"></i>  Services</a>
+        <a href="#contact"><i class="fa-solid fa-phone"></i>  Contact</a>
+        <a href="https://natasha-ubzr.onrender.com" id="chatbot-link"><i class="fa-solid fa-robot"></i>  Natasha AI</a>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 style="color: white; font-weight: bolder; font-size: 250%;" class="reveal">Innovation and Technology for a Brighter Future</h2>
+                    <p style="color: white; font-weight: bold; font-size: 120%;" class="slide-in">JI Technologies is an emerging tech company driven by innovation and excellence. Let's build a brighter future together!</p>
+                    <a href="#services"><button>Explore Our Services</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About JI Technologies</h2>
+                <p style="font-size: 19px;"><q><i>To bridge the technological gap in underserved regions by fostering skill development,
+ practical problem-solving, and real-world application of technology in various disciplines, aiming
+ to empower individuals with the practical knowledge and tools necessary to thrive in an
+ increasingly tech-driven world and also aiding a surge in tech products and solutions by the
+ African Continent</i></q></p>
+                <a href="about.html"><button>Read More</button></a>
+                <div class="about-image">
+                    <img src="ji tech.jpg" class="slideIn">
+                    <!-- Add an image representing the company here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <hr><br><br>
+                <div class="service-grid">
+
+                    <div class="service" onclick="openModal('modal1')">
+                        <img src="S1.jpg" alt="Service 1">
+                        <h3>Electronics Engineering</h3>
+                        <p>Our team designs and develops efficient and reliable electronic systems...</p>
+                    </div>
+
+                    <div class="service" onclick="openModal('modal2')">
+                        <img src="s4.jpg" alt="Service 2">
+                        <h3>System & Software Design</h3>
+                        <p>Our team design and build robust and user-friendly software applications, including websites...</p>
+                    </div>
+
+                    <div class="service" onclick="openModal('modal3')">
+                        <img src="s3.jpg" alt="Service 3">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Leveraging AI, we develop intelligent systems to automate and optimize processes...</p>
+                    </div>
+
+                    <div class="service" onclick="openModal('modal4')">
+                        <img src="s2.jpg" alt="Service 4">
+                        <h3>Robotics</h3>
+                        <p>Are you ready to embrace the future of automation?...</p>
+                    </div>
+                    
+                    <div class="service" onclick="openModal('modal5')">
+                        <img src="s5.jpg" alt="Service 5">
+                        <h3>Technology Education</h3>
+                        <p>Our approach emphasizes practical learning and direct application, ensuring participants are workforce ready</p>
+                    </div>
+
+                    <div class="service" onclick="openModal('modal6')">
+                        <img src="s6.jpg" alt="Service 6">
+                        <h3>Embedded Systems</h3>
+                        <p>We specialize in crafting these powerful systems,  seamlessly integrating software and hardware for maximum efficiency and reliability...</p>
+                    </div>
+                </div>
+                <h4>And many more to come...</h4>
+            </div>
+        </section>
+
+        <!-- Modal for Service 1 -->
+   <div id="modal1" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal1')">&times;</span>
+           <h2>Electronics Engineering</h2>
+           <img src="S1.jpg" alt="Service 1">
+           <p>
+                Electricity is the lifeblood of the modern world, driving innovation across industries. At J I Technologies, we harness the power of Electronics engineering to build a brighter future. From power generation and distribution to designing cutting-edge circuits and systems, our expertise encompasses a wide range of solutions:<br>
+                <b>Smart Technology</b>:  We create smart, interconnected systems that optimize energy use and improve quality of life in homes, businesses, and communities.
+            </p>
+       </div>
+   </div>
+
+        <!-- Modal for Service 2 -->
+   <div id="modal2" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal2')">&times;</span>
+           <h2>System & Software Design</h2>
+           <img src="s4.jpg" alt="Service 2">
+           <p>
+                In a world driven by data and digital connections, J I Technologies excels at turning innovative ideas into cutting-edge software solutions. Our team of software engineers, system designers, and web developers work seamlessly to:<br><br>
+
+                 <b>Create robust and scalable software</b>:  We develop custom solutions that meet your unique business needs, designed for growth and adaptability.<br> 
+                 <b>Design intuitive and engaging user experiences</b>:  We craft interfaces that are not only visually appealing but also easy to use, ensuring user satisfaction.<br> 
+                 <b>Optimize system performance and security</b>:  We prioritize data protection and system reliability, building secure platforms for your peace of mind.<br><br> 
+                Unlock your digital potential. Contact J I Technologies to build the software that takes your business to the next level.
+            </p>
+       </div>
+   </div>
+
+        <!-- Modal for Service 3 -->
+   <div id="modal3" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal3')">&times;</span>
+           <h2>Artificial Intelligence</h2>
+           <img src="s3.jpg" alt="Service 3">
+           <p>
+                Unlocking the Power of Artificial Intelligence, AI is changing the world.  J I Technologies is at the forefront of this revolution,  building intelligent solutions that  transform businesses,  improve lives, and shape the future. We specialize in developing customized AI solutions that:<br>
+                <b>Automate complex processes</b>:  Free your team from tedious tasks and empower them to focus on strategic initiatives. <br>
+                <b>Provide data-driven insights</b>:  Gain deeper understanding of your business operations and make informed decisions based on data analytics.<br> 
+                <b>Enhance decision making</b>:  Develop intelligent systems that analyze vast amounts of information and recommend the most optimal solutions. 
+            </p>
+       </div>
+   </div>
+
+        <!-- Modal for Service 4 -->
+   <div id="modal4" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal4')">&times;</span>
+           <h2>Robotics</h2>
+           <img src="s2.jpg" alt="Service 4">
+           <p>
+           JI Technologies is working on the design, development and deployment of custom robotic systems tailored to meet the specific needs of businesses, homes and organizations in the future.  
+
+            </p>
+       </div>
+   </div>
+
+
+        <!-- Modal for Service 5 -->
+   <div id="modal5" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal5')">&times;</span>
+           <h2>Technology Education</h2>
+           <img src="s5.jpg" alt="Service 5">
+           <p>
+            We will procide accessible, hands-on training programs, workshops and learning platforms designed to equip individuals with industry-relevant skills in fields such as software development, robotics, Artificial Intelligence, Electronics, and Web and App development. Our approach emphasizes practical learning and direct application, ensuring that our participants are workforce-ready
+            </p>
+       </div>
+   </div>
+
+        <!-- Modal for Service 6 -->
+   <div id="modal6" class="modal">
+       <div class="modal-content">
+           <span class="close" onclick="closeModal('modal6')">&times;</span>
+           <h2>Embedded Systems</h2>
+           <img src="s6.jpg" alt="Service 6">
+           <p>
+                J I Technologies ventures in crafting these powerful systems,  seamlessly integrating software and hardware for maximum efficiency and reliability. We design custom embedded solutions that:
+
+             Optimize device functionality -  Get more out of your devices with tailored programming and intelligent sensors.
+             Increase reliability -  Count on our robust designs and rigorous testing to ensure dependable performance.
+             Reduce costs -  Streamline production and optimize energy usage for improved cost efficiency.
+              </p>
+       </div>
+   </div>
+
+   <section class="contact" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Tell us what you think and we'll reach out to you!.</p>
+        <form id="contactForm" action="https://formspree.io/f/mpwzlbjw" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input id="phone" type="tel" placeholder="Enter your phone number" required>
+
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <div id="thankYouMessage" style="display:none; margin-top: 20px;">
+            <p>Thank you for contacting us! We will get back to you soon.</p>
+        </div>
+    </div>
+    </section>
+
+
+
+
+
+
+
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JI Technologies. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://chat.whatsapp.com/CHg37JpP4Ie5zKREZCZpmy" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="loading-spinner" class="loading-spinner" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+    }
+
+        function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+// Optional: Close the modal when the user clicks outside of it
+        window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+   }
+}
+</script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default anchor click behavior
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth' // Smooth scroll effect
+            });
+        });
+    });
+</script>
+<script>
+    function openModal(modalId) {
+        document.getElementById('loading-spinner').style.display = 'flex'; // Show spinner
+        document.getElementById(modalId).style.display = "block";
+        // Simulate loading time (for demonstration only)
+        setTimeout(function() {
+            document.getElementById('loading-spinner').style.display = 'none'; // Hide spinner
+        }, 1000); // Adjust the timeout as needed
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    // Close the modal when the user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target.id);
+        }
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        intlTelInput(input, {
+            initialCountry: "zm", // Set default country
+            preferredCountries: ["zm",], // Preferred countries at the top
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // Optional for formatting/validation
+        });
+    </script>
+    <script >
+        function toggleMenu() {
+    const menu = document.querySelector('.slide-menu');
+    menu.classList.toggle('active');
+}
+
+// Close the menu when any link (or item) inside the menu is clicked
+document.querySelectorAll('.slide-menu a').forEach(item => {
+    item.addEventListener('click', () => {
+        const menu = document.querySelector('.slide-menu');
+        menu.classList.remove('active');
+    });
+});
+
+
+    </script>
+
+
+
+    <script>
+        // Open the chatbot when the link is clicked
+        // Open the chatbot modal when the link is clicked
+document.getElementById('chatbot-link').addEventListener('click', function() {
+    
+    document.getElementById('chatbot-modal').style.display = 'block';  // Show the chatbot modal
+});
+
+// Close the chatbot modal when the 'Close' button is clicked
+document.getElementById('close-chatbot').addEventListener('click', function() {
+    document.getElementById('chatbot-modal').style.display = 'none';  // Hide the chatbot modal
+});
+
+// Send the message to the server and get a response when the send button is clicked
+document.getElementById('send-message').addEventListener('click', function() {
+    const userInput = document.getElementById('user-input').value;  // Get the user input
+    if (userInput.trim() !== '') {
+        // Display the user's message in the chat output
+        const chatOutput = document.getElementById('chat-output');
+        chatOutput.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+        document.getElementById('user-input').value = '';  // Clear input field
+
+        // Make a POST request to the Flask server
+        fetch('http://127.0.0.1:5000/chat', {  // Replace with the appropriate URL if deployed
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ user_input: userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.response) {
+                // Display the chatbot's response
+                chatOutput.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+            } else {
+                alert('Error: ' + data.error);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+});
+
+    </script>
+
+
+
+
+
+
+<div id="chatbot-modal" style="display:none;">
+    <div id="chatbot-container">
+        <div id="chat-output"></div>
+        <input type="text" id="user-input" placeholder="Type your message here">
+        <button id="send-message">Send</button>
+        <button id="close-chatbot">Close</button>
+    </div>
+</div>
+</body>
+</html>
