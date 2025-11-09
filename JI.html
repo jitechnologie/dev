@@ -11,7 +11,12 @@
             border-radius: 4px; /* Adjust the font size */
         }
     </style>
-    <script src="https://kit.fontawesome.com/11418c4102.js" crossorigin="anonymous"></script>
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById('slideMenu');
+        menu.classList.toggle('active');
+    }
+    </script>
 
     <link rel="icon" href="logo.png" sizes="14x16" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -65,23 +70,23 @@
             <div class="container">
                 <div class="hero-content">
                     <h2 style="color: white; font-weight: bolder; font-size: 250%;" class="reveal">Innovation and Technology for a Brighter Future</h2>
-                    <p style="color: white; font-weight: bold; font-size: 120%;" class="slide-in">JI Technologies is an emerging tech company driven by innovation and excellence. Let's build a brighter future together!</p>
-                    <a href="#services"><button>Explore Our Services</button></a>
+                    <p style="color: white; font-weight: bold; font-size: 120%;" class="reveal delay-1">JI Technologies is an emerging tech company driven by innovation and excellence. Let's build a brighter future together!</p>
+                    <a href="#services" class="reveal delay-2"><button class="primary-btn">Explore Our Services</button></a>
                 </div>
             </div>
         </section>
 
         <section class="about" id="about">
             <div class="container">
-                <h2>About JI Technologies</h2>
-                <p style="font-size: 19px;"><q><i>To bridge the technological gap in underserved regions by fostering skill development,
+                <h2 class="reveal">About JI Technologies</h2>
+                <p style="font-size: 19px;" class="reveal delay-1"><q><i>To bridge the technological gap in underserved regions by fostering skill development,
  practical problem-solving, and real-world application of technology in various disciplines, aiming
  to empower individuals with the practical knowledge and tools necessary to thrive in an
  increasingly tech-driven world and also aiding a surge in tech products and solutions by the
  African Continent</i></q></p>
-                <a href="about.html"><button>Read More</button></a>
-                <div class="about-image">
-                    <img src="ji tech.jpg" class="slideIn">
+                <a href="about.html" class="reveal delay-2"><button>Read More</button></a>
+                <div class="about-image reveal delay-3">
+                    <img src="ji tech.jpg" class="fade-in">
                     <!-- Add an image representing the company here -->
                 </div>
             </div>
@@ -89,69 +94,71 @@
 
         <section class="services" id="services">
             <div class="container">
-                <h2>Our Services</h2>
-                <hr><br><br>
+                <h2 class="reveal">Our Services</h2>
+                <hr class="reveal delay-1"><br><br>
                 <div class="service-grid">
-
-                    <div class="service" onclick="openModal('modal1')">
-                        <img src="S1.jpg" alt="Service 1">
+                    <div class="service reveal delay-1" onclick="openModal('modal1')">
+                        <img src="S1.jpg" alt="Service 1" class="fade-in">
                         <h3>Electronics Engineering</h3>
                         <p>Our team designs and develops efficient and reliable electronic systems...</p>
                     </div>
 
-                    <div class="service" onclick="openModal('modal2')">
-                        <img src="s4.jpg" alt="Service 2">
+                    <div class="service reveal delay-2" onclick="openModal('modal2')">
+                        <img src="s4.jpg" alt="Service 2" class="fade-in">
                         <h3>System & Software Design</h3>
                         <p>Our team design and build robust and user-friendly software applications, including websites...</p>
                     </div>
 
-                    <div class="service" onclick="openModal('modal3')">
-                        <img src="s3.jpg" alt="Service 3">
+                    <div class="service reveal delay-3" onclick="openModal('modal3')">
+                        <img src="s3.jpg" alt="Service 3" class="fade-in">
                         <h3>Artificial Intelligence</h3>
                         <p>Leveraging AI, we develop intelligent systems to automate and optimize processes...</p>
                     </div>
 
-                    <div class="service" onclick="openModal('modal4')">
-                        <img src="s2.jpg" alt="Service 4">
+                    <div class="service reveal delay-4" onclick="openModal('modal4')">
+                        <img src="s2.jpg" alt="Service 4" class="fade-in">
                         <h3>Robotics</h3>
                         <p>Are you ready to embrace the future of automation?...</p>
                     </div>
                     
-                    <div class="service" onclick="openModal('modal5')">
-                        <img src="s5.jpg" alt="Service 5">
+                    <div class="service reveal delay-1" onclick="openModal('modal5')">
+                        <img src="s5.jpg" alt="Service 5" class="fade-in">
                         <h3>Technology Education</h3>
                         <p>Our approach emphasizes practical learning and direct application, ensuring participants are workforce ready</p>
                     </div>
 
-                    <div class="service" onclick="openModal('modal6')">
-                        <img src="s6.jpg" alt="Service 6">
+                    <div class="service reveal delay-2" onclick="openModal('modal6')">
+                        <img src="s6.jpg" alt="Service 6" class="fade-in">
                         <h3>Embedded Systems</h3>
                         <p>We specialize in crafting these powerful systems,  seamlessly integrating software and hardware for maximum efficiency and reliability...</p>
                     </div>
                 </div>
-                <h4>And many more to come...</h4>
+                <h4 class="reveal delay-4">And many more to come...</h4>
             </div>
         </section>
 
         <!-- Modal for Service 1 -->
-   <div id="modal1" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal1')">&times;</span>
-           <h2>Electronics Engineering</h2>
+   <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1-title" aria-describedby="modal1-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal1')">&times;</button>
+           <h2 id="modal1-title">Electronics Engineering</h2>
            <img src="S1.jpg" alt="Service 1">
+           <div id="modal1-desc">
            <p>
                 Electricity is the lifeblood of the modern world, driving innovation across industries. At J I Technologies, we harness the power of Electronics engineering to build a brighter future. From power generation and distribution to designing cutting-edge circuits and systems, our expertise encompasses a wide range of solutions:<br>
                 <b>Smart Technology</b>:  We create smart, interconnected systems that optimize energy use and improve quality of life in homes, businesses, and communities.
             </p>
+           </div>
        </div>
    </div>
 
         <!-- Modal for Service 2 -->
-   <div id="modal2" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal2')">&times;</span>
-           <h2>System & Software Design</h2>
+   <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title" aria-describedby="modal2-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal2')">&times;</button>
+           <h2 id="modal2-title">System & Software Design</h2>
            <img src="s4.jpg" alt="Service 2">
+           <div id="modal2-desc">
            <p>
                 In a world driven by data and digital connections, J I Technologies excels at turning innovative ideas into cutting-edge software solutions. Our team of software engineers, system designers, and web developers work seamlessly to:<br><br>
 
@@ -160,56 +167,64 @@
                  <b>Optimize system performance and security</b>:  We prioritize data protection and system reliability, building secure platforms for your peace of mind.<br><br> 
                 Unlock your digital potential. Contact J I Technologies to build the software that takes your business to the next level.
             </p>
+           </div>
        </div>
    </div>
 
         <!-- Modal for Service 3 -->
-   <div id="modal3" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal3')">&times;</span>
-           <h2>Artificial Intelligence</h2>
+   <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title" aria-describedby="modal3-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal3')">&times;</button>
+           <h2 id="modal3-title">Artificial Intelligence</h2>
            <img src="s3.jpg" alt="Service 3">
+           <div id="modal3-desc">
            <p>
                 Unlocking the Power of Artificial Intelligence, AI is changing the world.  J I Technologies is at the forefront of this revolution,  building intelligent solutions that  transform businesses,  improve lives, and shape the future. We specialize in developing customized AI solutions that:<br>
                 <b>Automate complex processes</b>:  Free your team from tedious tasks and empower them to focus on strategic initiatives. <br>
                 <b>Provide data-driven insights</b>:  Gain deeper understanding of your business operations and make informed decisions based on data analytics.<br> 
                 <b>Enhance decision making</b>:  Develop intelligent systems that analyze vast amounts of information and recommend the most optimal solutions. 
             </p>
+           </div>
        </div>
    </div>
 
         <!-- Modal for Service 4 -->
-   <div id="modal4" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal4')">&times;</span>
-           <h2>Robotics</h2>
+   <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title" aria-describedby="modal4-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal4')">&times;</button>
+           <h2 id="modal4-title">Robotics</h2>
            <img src="s2.jpg" alt="Service 4">
+           <div id="modal4-desc">
            <p>
            JI Technologies is working on the design, development and deployment of custom robotic systems tailored to meet the specific needs of businesses, homes and organizations in the future.  
 
             </p>
+           </div>
        </div>
    </div>
 
 
         <!-- Modal for Service 5 -->
-   <div id="modal5" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal5')">&times;</span>
-           <h2>Technology Education</h2>
+   <div id="modal5" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal5-title" aria-describedby="modal5-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal5')">&times;</button>
+           <h2 id="modal5-title">Technology Education</h2>
            <img src="s5.jpg" alt="Service 5">
+           <div id="modal5-desc">
            <p>
             We will procide accessible, hands-on training programs, workshops and learning platforms designed to equip individuals with industry-relevant skills in fields such as software development, robotics, Artificial Intelligence, Electronics, and Web and App development. Our approach emphasizes practical learning and direct application, ensuring that our participants are workforce-ready
             </p>
+           </div>
        </div>
    </div>
 
         <!-- Modal for Service 6 -->
-   <div id="modal6" class="modal">
-       <div class="modal-content">
-           <span class="close" onclick="closeModal('modal6')">&times;</span>
-           <h2>Embedded Systems</h2>
+   <div id="modal6" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal6-title" aria-describedby="modal6-desc" tabindex="-1">
+       <div class="modal-content" role="document">
+           <button class="close" aria-label="Close modal" onclick="closeModal('modal6')">&times;</button>
+           <h2 id="modal6-title">Embedded Systems</h2>
            <img src="s6.jpg" alt="Service 6">
+           <div id="modal6-desc">
            <p>
                 J I Technologies ventures in crafting these powerful systems,  seamlessly integrating software and hardware for maximum efficiency and reliability. We design custom embedded solutions that:
 
@@ -217,6 +232,7 @@
              Increase reliability -  Count on our robust designs and rigorous testing to ensure dependable performance.
              Reduce costs -  Streamline production and optimize energy usage for improved cost efficiency.
               </p>
+           </div>
        </div>
    </div>
 
@@ -257,7 +273,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 JI Technologies. All rights reserved.</p>
+            <p>&copy; 2024 JI Technologies. All rights reserved.</p>
             <ul class="social-links">
                 <li><a href="https://chat.whatsapp.com/CHg37JpP4Ie5zKREZCZpmy" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
@@ -271,23 +287,9 @@
 
 
     <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+
+    <!-- removed duplicate simple modal handlers; consolidated later -->
     <script>
-        function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-
-        function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-
-// Optional: Close the modal when the user clicks outside of it
-        window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
-   }
-}
-</script>
-<script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent the default anchor click behavior
@@ -297,28 +299,90 @@
             });
         });
     });
-</script>
-<script>
-    function openModal(modalId) {
-        document.getElementById('loading-spinner').style.display = 'flex'; // Show spinner
-        document.getElementById(modalId).style.display = "block";
-        // Simulate loading time (for demonstration only)
-        setTimeout(function() {
-            document.getElementById('loading-spinner').style.display = 'none'; // Hide spinner
-        }, 1000); // Adjust the timeout as needed
-    }
+    </script>
+    <script>
+        // Unified modal handlers with accessibility: focus trap, Escape to close, and spinner
+        (function(){
+            let lastFocused = null;
 
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
+            function getFocusableElements(root) {
+                if (!root) return [];
+                const selectors = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable]';
+                return Array.from(root.querySelectorAll(selectors)).filter(el => el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement);
+            }
 
-    // Close the modal when the user clicks outside of it
-    window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-            closeModal(event.target.id);
-        }
-    }
-</script>
+            window.openModal = function(modalId){
+                const spinner = document.getElementById('loading-spinner');
+                if (spinner) spinner.style.display = 'flex';
+
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+
+                lastFocused = document.activeElement;
+
+                setTimeout(function(){
+                    modal.classList.add('open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    if (spinner) spinner.style.display = 'none';
+
+                    // focus the first focusable element or the modal itself
+                    const focusables = getFocusableElements(modal);
+                    if (focusables.length) focusables[0].focus(); else modal.focus();
+
+                    // add key handler for Escape and Tab trap
+                    modal._keyHandler = function(e){
+                        if (e.key === 'Escape'){
+                            e.preventDefault();
+                            window.closeModal(modalId);
+                            return;
+                        }
+                        if (e.key === 'Tab'){
+                            const f = getFocusableElements(modal);
+                            if (f.length === 0){
+                                e.preventDefault();
+                                return;
+                            }
+                            const idx = f.indexOf(document.activeElement);
+                            if (e.shiftKey){
+                                if (idx === 0 || document.activeElement === modal){
+                                    e.preventDefault();
+                                    f[f.length - 1].focus();
+                                }
+                            } else {
+                                if (idx === f.length - 1){
+                                    e.preventDefault();
+                                    f[0].focus();
+                                }
+                            }
+                        }
+                    };
+
+                    document.addEventListener('keydown', modal._keyHandler);
+
+                }, 220);
+            };
+
+            window.closeModal = function(modalId){
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                if (modal._keyHandler) document.removeEventListener('keydown', modal._keyHandler);
+                if (lastFocused && lastFocused.focus) lastFocused.focus();
+                lastFocused = null;
+            };
+
+            // Close the modal when the backdrop is clicked
+            window.addEventListener('click', function(event){
+                if (event.target.classList && event.target.classList.contains('modal')){
+                    const id = event.target.id;
+                    if (id) window.closeModal(id);
+                }
+            });
+        })();
+    </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script>
@@ -331,19 +395,33 @@
     </script>
     <script >
         function toggleMenu() {
-    const menu = document.querySelector('.slide-menu');
-    menu.classList.toggle('active');
-}
+            const menu = document.querySelector('.slide-menu');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                // Add click listener to close menu when clicking outside
+                document.addEventListener('mousedown', closeMenuOnOutsideClick);
+            } else {
+                document.removeEventListener('mousedown', closeMenuOnOutsideClick);
+            }
+        }
 
-// Close the menu when any link (or item) inside the menu is clicked
-document.querySelectorAll('.slide-menu a').forEach(item => {
-    item.addEventListener('click', () => {
-        const menu = document.querySelector('.slide-menu');
-        menu.classList.remove('active');
-    });
-});
+        function closeMenuOnOutsideClick(e) {
+            const menu = document.querySelector('.slide-menu');
+            const icon = document.querySelector('.menu-icon');
+            if (menu.classList.contains('active') && !menu.contains(e.target) && !icon.contains(e.target)) {
+                menu.classList.remove('active');
+                document.removeEventListener('mousedown', closeMenuOnOutsideClick);
+            }
+        }
 
-
+        // Close the menu when any link inside the menu is clicked
+        document.querySelectorAll('.slide-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                const menu = document.querySelector('.slide-menu');
+                menu.classList.remove('active');
+                document.removeEventListener('mousedown', closeMenuOnOutsideClick);
+            });
+        });
     </script>
 
 
@@ -407,5 +485,4 @@ document.getElementById('send-message').addEventListener('click', function() {
     </div>
 </div>
 </body>
-
 </html>
